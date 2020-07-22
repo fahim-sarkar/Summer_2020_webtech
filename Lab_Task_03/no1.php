@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <form method="POST">
 	<b>Name:</b><br>
-	<input type="text" name="sname" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Use two Letters at least" value=""><br> <p></p>
+	<input type="text" name="sname" pattern="[a-z0-9._-]" title="Use two Letters at least" value=""><br> <p></p>
 <input type="submit" name="" value="submit">
 </form>
 </body>
