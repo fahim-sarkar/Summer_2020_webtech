@@ -1,14 +1,36 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+<style>
+.error {color: #00FF00}
+</style>
+</head>
+<body> 
+
+
 <?php
+$genderErr =  "";
+$name = $email = $gender = $comment = $website = "";
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-	$name = $_POST['gender'];
-
-	if($name == "")
-	{
-		echo "Cannot be empty";
-	}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
+	function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
 }
+	
+	
+	
+	 if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+  
+  
 
 
 
@@ -17,21 +39,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title> Email Form</title>
-</head>
-<body>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-<form method="POST">
-	<input type="radio" id="male" name="gender" value="male">
-<label for="male">Male</label>
-<input type="radio" id="female" name="gender" value="female">
-<label for="female">Female</label>
-<input type="radio" id="other" name="gender" value="other">
-<label for="other">Other</label><br>
-<input type="submit" name="" value="submit">
+  Gender:<br/>
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other
+  <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+  
+  <input type="submit" name="submit" value="Submit">  
 </form>
+
+
+
+
+
+
 </body>
 </html>
