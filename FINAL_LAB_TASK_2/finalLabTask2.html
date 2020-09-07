@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Profile Registration</title>
+	
+	
+	<script>
+function validateForm() {
+  var x = document.forms["myForm"]["val1"].value;
+  if (x == "") {
+    alert("All fields must be filled out");
+    return false;
+  }
+}
+</script>
+	
+</head>	
+
+<body>
+<form name="myForm" action="css file not built yet" onsubmit="return validateForm()" method="post">
+	<center> <table width ="750px" border="1px" >
+		<tr>
+			<td align="center" colspan="3">PERSON REGISTRATION</td>
+		</tr>
+
+		<tr>
+			<td>Name</td>
+			<td colspan="2"><input type = "text" name="val1" required/></td>
+		</tr>
+
+		<tr>
+			<td>Email</td>
+			<td><input type = "text" name="val1" required/></td>
+		</tr>
+
+		<tr>
+			<td>Gender</td>
+			<td><input type = "radio" name="rButton" />Male <input type = "radio" name="rButton" />Female <input type = "radio" name="rButton" />Other</td>
+			
+		</tr>
+
+		<tr>
+			<td>Date of Birth</td>
+			<td><input type = "text" name="val1" required/>
+			/
+			<input type = "text" name="val1" required/>
+			/
+			<input type = "text" name="val1" required/>
+			(dd/mm/yyy)</td>
+		</tr>
+
+		<tr>
+			<td>Blood Group</td>
+			<td>
+				<select name="bg" required>
+					<option value ="o pos">O+ve</option>
+					<option value ="o pos">A+ve</option>
+					<option value ="o pos">A-ve</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Degree</td>
+			<td>
+				<input type = "checkbox" name="ssc">SSC
+				<input type = "checkbox" name="hsc">HSC
+				<input type = "checkbox" name="bsc">BSc.
+				<input type = "checkbox" name="msc">MSc.
+			</td>
+		</tr>
+
+		<tr>
+			<td>Photo</td>
+			<td>
+				<input type = "file" name="val1" id="fileToUpload"> No File selected
+			</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>
+				<br/>
+				<br/>
+				<input type = "submit" value="Submit">
+				<input type = "submit" value="Reset">
+			</td>
+		</tr>
+
+	</table>
+</center>
+
+
+</form>
+</body>
+</html>
