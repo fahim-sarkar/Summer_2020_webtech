@@ -21,7 +21,7 @@ if (isset($_POST['search'])) {
    <a>
 
        <?php echo $Result['name']; ?>
-   </li></a>
+      </li></a>
    
 }}
 ?>
