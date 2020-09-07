@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+
+
+
+<style type="text/css"> 
+
+    #appearence{
+	display: none;
+	}
+	
+
+ </style>
+
+	<meta charset="UTF-8">
+	<title>SIGNUP</title>
+	
+	
+
+	
+</head>	
+
+<body>
+<form name="myForm" action="registration.php" onsubmit="return validateForm()" method="post">
+	<center> <table width ="250px" border="1px" >
+		<tr>
+			<td align="center" colspan="2">Signup to the system</td>
+		</tr>
+        
+		<tr>
+			<td>Id</td>
+			<td colspan="2"><input type = "number" name="id"/></td>
+		</tr>
+
+		<tr>
+			<td>Password</td>
+			<td colspan="2"><input type = "password" name="pass"/></td>
+		</tr>
+
+   		<tr>
+			<td>Confirm Password</td>
+			<td colspan="2"><input type = "password" name="conP"/></td>
+		</tr>
+
+		
+		
+		<tr>
+			<td>Name</td>
+			<td colspan="2"><input type = "text" name="name"/></td>
+		</tr>
+
+		<tr>
+			<td>Email</td>
+			<td><input type = "email" name="email" required/></td>
+		</tr>
+		
+		
+		<tr>
+			<td>User type (User/admin)</td>
+			<td>
+			<select name="uType">
+			<option name="select" selected>Select One</option>
+            <option name="user">User</option>
+            <option name="admin">Admin</option>
+            </select>
+			</td>
+		</tr>
+		
+		
+		
+		<tr>
+
+		    <td colspan="2"> 
+			    <button type = "submit" onclick="buttonAppear()"> Signup </button>
+				
+				<button id="appearence" type="button" > <a href="login.html">Login </a> </button> 
+				
+				
+		
+				<script>
+                        function buttonAppear() {
+                        var x = document.getElementById("appearence");
+                        if (x.style.display == "none") {
+                          x.style.display = "block";
+                        } else {
+                          x.style.display = "none";
+                        }
+                      }
+                </script>
+				
+			</td>
+
+	
+				
+		</tr>		
+				
+		
+
+	</table>
+</center>
+
+
+</form>
+</body>
+</html>
