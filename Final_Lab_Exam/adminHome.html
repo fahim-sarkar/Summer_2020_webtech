@@ -18,11 +18,29 @@ if(!isset($_SESSION['id'])){
 <head>
 	<meta charset="UTF-8">
 	<title> Home </title>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   
+   <script type="text/javascript" src="script.js"></script>
+	
+	
+	
+	
 </head>
 <body>
 	
 	
 	 <h1> Welcome <?php echo $_SESSION['id'];?> </h1>
+	
+	
+	<input type="text" id="search" placeholder="Search Here" />
+   <br>
+   
+   <br />
+  
+   <div id="display"></div>
+
+	
 	
 	
 	
